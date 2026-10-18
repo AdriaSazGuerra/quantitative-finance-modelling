@@ -1,54 +1,35 @@
 # Quantitative Finance Modelling
 
-A portfolio collection of fixed-income, derivatives and credit-risk models developed from **Advanced Financial Engineering** coursework and extended with reproducible Python implementations.
+Selected **Advanced Financial Engineering** coursework covering fixed income, derivatives, FX and credit risk.
 
-![Bootstrapped yield curve](assets/yield_curve.svg)
+The repository is organized around the original spreadsheet models and the corresponding written reports. The Excel workbooks are kept as actual `.xlsx` files; the reports are `.pdf` files that GitHub can display directly in its built-in PDF viewer.
 
-## What is included
+## Models and reports
 
-This repository follows a progression from core cash-flow modelling to curve construction, derivatives valuation and credit risk:
+| # | Topic | Excel model | Report |
+|---:|---|---|---|
+| 0 | Mortgage amortisation | [HW0 `.xlsx`](spreadsheets/HW0_mortgage_amortisation.xlsx) | [HW0 `.pdf`](reports/advanced_financial_engineering_HW0.pdf) |
+| 1 | Bond pricing & pull-to-par | [HW1 `.xlsx`](spreadsheets/HW1_bond_pricing_pull_to_par.xlsx) | [HW1 `.pdf`](reports/advanced_financial_engineering_HW1.pdf) |
+| 2 | Realised return & reinvestment | [HW2 `.xlsx`](spreadsheets/HW2_realized_return_reinvestment.xlsx) | [HW2 `.pdf`](reports/advanced_financial_engineering_HW2.pdf) |
+| 3 | Yield-curve bootstrapping | [HW3 `.xlsx`](spreadsheets/HW3_yield_curve_bootstrapping.xlsx) | [HW3 `.pdf`](reports/advanced_financial_engineering_HW3.pdf) |
+| 4 | Forwards & futures | [HW4 `.xlsx`](spreadsheets/HW4_forwards_and_futures.xlsx) | [HW4 `.pdf`](reports/advanced_financial_engineering_HW4.pdf) |
+| 5 | FX hedging | [HW5 `.xlsx`](spreadsheets/HW5_fx_hedging.xlsx) | [HW5 `.pdf`](reports/advanced_financial_engineering_HW5.pdf) |
+| 6 | Currency swaps | [HW6 `.xlsx`](spreadsheets/HW6_currency_swaps.xlsx) | [HW6 `.pdf`](reports/advanced_financial_engineering_HW6.pdf) |
+| 7 | Interest-rate swap valuation | [HW7 `.xlsx`](spreadsheets/HW7_interest_rate_swap_valuation.xlsx) | [HW7 `.pdf`](reports/advanced_financial_engineering_HW7.pdf) |
+| 8 | Credit risk & CDS | [HW8 `.xlsx`](spreadsheets/HW8_credit_risk_cds.xlsx) | [HW8 `.pdf`](reports/advanced_financial_engineering_HW8.pdf) |
 
-- mortgage amortisation under fixed and floating-rate scenarios
-- bond pricing, discounting, pull-to-par and realised return
-- spot-curve bootstrapping and implied forward rates
-- forward and futures pricing under no-arbitrage
+## Coverage
+
+- cash-flow schedules and mortgage amortisation
+- bond pricing, yield and pull-to-par
+- realised return with coupon reinvestment
+- zero-coupon curve bootstrapping and implied forward rates
+- no-arbitrage pricing of forwards and futures
 - FX hedging and currency swaps
-- interest-rate swap valuation using discount and forward curves
-- hazard rates, survival probabilities and CDS pricing
+- interest-rate swap valuation with discount and forward curves
+- hazard rates, survival probabilities and CDS premium/protection legs
 
-## Reproducible Python models
+The spreadsheet models are the primary artifacts. GitHub displays PDFs inline when opened. Excel workbooks are stored in their native format; GitHub does not natively render `.xlsx` sheets in the same way it renders PDFs, so the workbook link opens the file page/download while the paired PDF can be viewed directly in the browser.
 
-| Model | Script | Notebook | Main result reproduced |
-|---|---|---|---|
-| Yield-curve bootstrapping | [`python/yield_curve_bootstrapping.py`](python/yield_curve_bootstrapping.py) | [`python/yield_curve_bootstrapping.ipynb`](python/yield_curve_bootstrapping.ipynb) | 1Y–6Y spot curve and implied forwards |
-| Interest-rate swap | [`python/interest_rate_swap_valuation.py`](python/interest_rate_swap_valuation.py) | [`python/interest_rate_swap_valuation.ipynb`](python/interest_rate_swap_valuation.ipynb) | EUR 10m payer swap valuation and revaluation |
-| Credit default swap | [`python/credit_default_swap_pricing.py`](python/credit_default_swap_pricing.py) | [`python/credit_default_swap_pricing.ipynb`](python/credit_default_swap_pricing.ipynb) | 5Y fair CDS spread from premium/protection legs |
-
-### Verified outputs
-
-- bootstrapped spot rates: **3.0928%, 4.5950%, 5.5019%, 5.8571%, 5.5639%, 5.4137%** for maturities 1Y–6Y
-- implied 2Y3Y forward rate: **6.2148%**
-- EUR 10m payer swap par fixed rate: **-0.2436%** under the assignment curve inputs
-- 1Y swap NPV under the shifted-curve scenario: approximately **EUR 776k**
-- 5Y CDS fair spread: approximately **224.2 bp** under the assignment assumptions
-
-![Swap forward curves](assets/swap_forward_curves.svg)
-
-![CDS premium and protection legs](assets/cds_legs.svg)
-
-## Source models
-
-- [`spreadsheets/`](spreadsheets/) contains the cleaned Excel models
-- [`reports/`](reports/) contains privacy-cleaned PDF portfolio editions of the corresponding coursework reports
-- [`MODEL_INDEX.md`](MODEL_INDEX.md) maps each workbook to its main quantitative topic
-- [`RESULTS.md`](RESULTS.md) summarizes the strongest numerical results
-
-The public artifacts remove student identifiers and collaborator names. The original coursework was completed collaboratively; this repository is a privacy-cleaned portfolio edition prepared and maintained by **Adrià Saz Guerra**. The Python reconstructions, repository structure and portfolio visualisations are additional portfolio work.
-
-## Tools
-
-Python, NumPy, Matplotlib, Excel, fixed-income mathematics, curve bootstrapping, interpolation, no-arbitrage pricing, cash-flow discounting and credit-risk modelling
-
-## Disclaimer
-
-Academic portfolio material only. Nothing in this repository constitutes investment advice.
+---
+<sub>Public portfolio copies: collaborator names are anonymized; the student identifier is masked. The underlying coursework was completed collaboratively.</sub>
