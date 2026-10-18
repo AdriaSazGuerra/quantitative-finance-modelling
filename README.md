@@ -24,7 +24,7 @@ This repository covers a progression from fixed-income fundamentals to derivativ
 
 ## Repository structure
 
-`spreadsheets/` contains cleaned public versions of the original Excel models. Collaborator names and student identifiers have been removed for privacy.
+`MODEL_INDEX.md` summarises the modelling sequence and `RESULTS.md` collects representative quantitative outputs. The original models were built in Excel; sanitized workbook copies are maintained separately so collaborator names and student identifiers are not exposed publicly.
 
 ## Tools
 
